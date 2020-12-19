@@ -27,7 +27,7 @@
               <thead>
                 <tr>
                   <th>Nome Atividade</th>
-                  <th>Conteudo Atividade</th>
+                  <th>Data Criacao</th>
                   <th>Criada por</th>
                   <th>Pessoa Responsavel</th>
                   <th>Estado</th>
@@ -39,10 +39,18 @@
                 <% @atividades.each do |atividade| %>
                   <tr>
                     <td><%= atividade.nomeAtividade %></td>
-                    <td><%= atividade.conteudoAtividade %></td>
+                    <td><%= atividade.created_at %></td>
                     <td><%= atividade.criadaPor %></td>
                     <td><%= atividade.pessoaResponsavel %></td>
-                    <td><%= atividade.estado %></td>
+                     <% if atividade.estado == 0 %>
+                        <td>Para fazer</td>
+                    <% else %>
+                        <% if  atividade.estado == 1 %>
+                            <td>Em andamento</td>
+                        <% else %>
+                            <td>Feita</td>
+                        <% end %>
+                    <% end %>
                     <td><%= link_to 'Show', atividade %></td>
                     <td><%= link_to 'Edit', edit_atividade_path(atividade) %></td>
                     <td><%= link_to 'Destroy', atividade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
