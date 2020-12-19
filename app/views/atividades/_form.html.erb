@@ -10,33 +10,67 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="conteudo">
+        <header>
+            <nav>
+                <ul class="nav-links1">
+                    <li class="cor-branca"><a href="#">To do List Now</a></li>
+                    <li class="config-link-nav">
+                        <a id="hora" href="#"></a>
+                    </li>
+                    <li class=""><a href="#">Usuario 01</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="links">
+            <div>
+                <ul class="nav-links2 bg-branco">
+                    <li class="borda-direita">
+                      <%= link_to 'Tarefas', atividades_path, class: "cor-preta" %>
+                      <%# a class="cor-preta" href="index.html">Tarefas</a> %>
+                    </li>
+                    <li class="borda-direita ">
+                      <a class="cor-preta" href="kambam.html">Kambam</a>
+                      </li>
+                    <li class="borda-direita link-ativo">
+                      <a class="cor-preta" href="#">Cadastrar Atividade</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="tarefas">
+            <div class="formulario-atividade">
+                 <div class="field">
+                    <%= form.label :"Nome Atividade" %>
+                    <%= form.text_field :nomeAtividade, class: "form-input" %>
+                  </div>
 
-  <div class="field">
-    <%= form.label :nomeAtividade %>
-    <%= form.text_field :nomeAtividade %>
-  </div>
+                  <div class="field">
+                    <%= form.label :"Conteudo Atividade" %>
+                    <%= form.text_field :conteudoAtividade, class: "form-input" %>
+                  </div>
 
-  <div class="field">
-    <%= form.label :conteudoAtividade %>
-    <%= form.text_field :conteudoAtividade %>
-  </div>
+                  <div class="field">
+                    <%= form.label :"Criada Por" %>
+                    <%= form.text_field :criadaPor, class: "form-input" %>
+                  </div>
 
-  <div class="field">
-    <%= form.label :criadaPor %>
-    <%= form.text_field :criadaPor %>
-  </div>
+                  <div class="field">
+                    <%= form.label "Pessoa Responsavel" %>
+                    <%= form.text_field :pessoaResponsavel, class: "form-input"  %>
+                  </div>
 
-  <div class="field">
-    <%= form.label :pessoaResponsavel %>
-    <%= form.text_field :pessoaResponsavel %>
-  </div>
+                  <div class="field">
+                    <%= form.text_field :estado,class: "form-input", value: "0", type: :hidden %>
+                  </div>
 
-  <div class="field">
-    <%= form.label :estado %>
-    <%= form.number_field :estado %>
-  </div>
+                  <div class="actions">
+                    <%= form.submit "Cadastrar Atividade", class: "btn-form btn-azul" %>
+                  </div>
+            </div>
+        </section>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
+
