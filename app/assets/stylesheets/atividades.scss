@@ -1,3 +1,340 @@
 // Place all the styles related to the atividades controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* Configurações do tema inicio */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: -webkit-gradient(linear, left top, left bottom, from( #013D83), to(#c4c4c4)) fixed;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+.conteudo {
+    width: 90%;
+    height: 600px;
+    margin: auto;
+}
+
+.nav-links1 {
+    display: flex;
+}
+
+.nav-links1 a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.nav-links2 {
+    display: flex;
+}
+
+.nav-links2 a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.nav-links2 a:hover {
+    background-color: rgb(231, 221, 221);
+}
+
+.link-ativo {
+    background-color: rgb(231, 221, 221);
+}
+
+.config-link-nav {
+    margin-left: auto;
+    margin-right: 90px;
+}
+
+.links {
+    margin: auto;
+    margin-top: 70px;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.bg-branco {
+    background-color: #fff;
+}
+
+.cor-preta {
+    color: #000000 !important;
+}
+
+.borda-direita {
+    border-right: 1px solid #000000;
+}
+
+
+/* Configuraçãoes do tema fim*/
+
+
+/* Inicio da tabela de atividades */
+
+.tarefas {
+    width: 90%;
+    margin: auto;
+    margin-top: 70px;
+    background-color: #fff;
+    height: 370px;
+    overflow-y: auto;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+.tabela {
+    width: 100%;
+}
+
+.tabela,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+/* Fim da tabela de atividades */
+
+
+/* Inicio do quadro kamabam */
+
+.kambam {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.item {
+    width: 30%;
+}
+
+.bg-amarelo,
+.bg-cinza,
+.bg-vermelho {
+    color: #fff;
+    text-align: center;
+}
+
+.bg-cinza {
+    background-color: #47D1E2;
+}
+
+.bg-amarelo {
+    background-color: #75D900;
+}
+
+.bg-vermelho {
+    background-color: #791812;
+}
+
+.borda-cinza {
+    border-left: 3px solid #47D1E2;
+}
+
+.borda-amarela {
+    border-left: 3px solid #75D900;
+}
+
+.borda-vermelha {
+    border-left: 3px solid #791812;
+}
+
+.content-tarefas {
+    width: 100%;
+}
+
+.titulo-item {
+    padding: 6px;
+}
+
+.atividade {
+    width: 100%;
+    height: 90px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.39), 0 2px 10px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+
+/* Fim do quadro kambam */
+
+
+/* Inicio do formualario de cadastro de atividades */
+
+.formulario-atividade {
+    padding: 10px;
+}
+
+.form-input {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    border: 1px solid rgb(155, 149, 149);
+    border-radius: 5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.btn-form {
+    width: 100%;
+    font-size: 20px;
+    display: block;
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn-azul {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+/* Fim do formualario de cadastro de atividades */
+
+
+/* Inicio modal */
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.conteudo-atividade {
+    width: 70%;
+    height: 500px;
+    margin: auto;
+    display: none;
+    margin-top: 40px;
+    background-color: #EEF2F4;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.39), 0 2px 10px 0 rgba(0, 0, 0, 0.20);
+    justify-content: space-between;
+    animation: zoomoverlay 0.6s;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+}
+
+.lado-esquerdo {
+    width: 69%;
+    height: 450px;
+    background-color: #fff;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.39), 0 2px 10px 0 rgba(0, 0, 0, 0.20);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.lado-direito {
+    width: 27%;
+    height: 300px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.39), 0 2px 10px 0 rgba(0, 0, 0, 0.20);
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.titulo-overlay {
+    background-color: #56D1E0;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.conteudo-overlay {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.link-overlay li {
+    padding: 10px;
+    border-bottom: 1px solid #000000;
+}
+
+.span-overlay {
+    color: #858c96;
+    font-weight: 600;
+}
+
+#close-overlay {
+    position: absolute;
+    right: 0;
+    top: -14px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+@keyframes zoomoverlay {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
