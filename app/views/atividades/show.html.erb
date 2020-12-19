@@ -1,29 +1,69 @@
 <p id="notice"><%= notice %></p>
+   <div class="conteudo">
+        <header>
+            <nav>
+                <ul class="nav-links1">
+                    <li class="cor-branca"><a href="#">To do List Now</a></li>
+                    <li class="config-link-nav">
+                        <a id="hora" href="#"></a>
+                    </li>
+                    <li class=""><a href="#">Usuario 01</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="links">
+            <div>
+                <ul class="nav-links2 bg-branco">
+                    <li class="borda-direita">
+                      <%= link_to 'Tarefas', atividades_path, class: "cor-preta" %>
+                    </li>
+                    <li class="borda-direita ">
+                      <a class="cor-preta" href="kambam.html">Kambam</a>
+                      </li>
+                    <li class="borda-direita">
+                      <%= link_to 'Cadastrar Atividade', new_atividade_path, class: "cor-preta" %>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="">
+           <div class="conteudo-atividade" style="display: flex !important;">
+                    <div class="lado-esquerdo">
+                        <h3> <%= @atividade.nomeAtividade %></h3>
+                        <p>
+                            <%= @atividade.conteudoAtividade %>
+                        </p>
+                    </div>
+                    <div class="lado-direito">
+                        <div class="titulo-overlay">
+                            <h3>Detalhes</h3>
+                        </div>
+                        <div class="conteudo-overlay">
+                            <ul class="link-overlay">
+                                <li><span class="span-overlay">Criada em:</span> <%= @atividade.created_at %></li>
+                                <li><span class="span-overlay">Criada por:</span><%= @atividade.criadaPor %></li>
+                                <li><span class="span-overlay">Pessoa responsavel</span>  <%= @atividade.pessoaResponsavel %></li>
+                                
+                                <% if @atividade.estado == 0 %>
+                                    <li><span class="span-overlay">Estado da Atividade </span>Para fazer</li>
+                                  <% else %>
+                                    
+                                    <% if  @atividade.estado == 1 %>
+                                      <li><span class="span-overlay">Estado da Atividade </span>Fazendo</li>
+                                      <% else %>
+                                      <li><span class="span-overlay">Estado da Atividade </span>Feita</li>
+                                    <% end %>
+                                <% end %>
+                            </ul>
+                            <%= link_to 'Voltar', atividades_path, class: "btn-form btn-cinza mt-1" %>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section>
+            <div id="overlay">
+                
+            </div>
+        </section>
+    </div>
 
-<p>
-  <strong>Nomeatividade:</strong>
-  <%= @atividade.nomeAtividade %>
-</p>
-
-<p>
-  <strong>Conteudoatividade:</strong>
-  <%= @atividade.conteudoAtividade %>
-</p>
-
-<p>
-  <strong>Criadapor:</strong>
-  <%= @atividade.criadaPor %>
-</p>
-
-<p>
-  <strong>Pessoaresponsavel:</strong>
-  <%= @atividade.pessoaResponsavel %>
-</p>
-
-<p>
-  <strong>Estado:</strong>
-  <%= @atividade.estado %>
-</p>
-
-<%= link_to 'Edit', edit_atividade_path(@atividade) %> |
-<%= link_to 'Back', atividades_path %>
