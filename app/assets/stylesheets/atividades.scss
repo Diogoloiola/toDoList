@@ -231,11 +231,18 @@ select {
     border: none;
     border-radius: 5px;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 .btn-azul {
     background-color: #007bff;
     color: #fff;
+}
+
+.btn-cinza {
+    background-color: #56D1E0;
+    color: #fff;
+    padding: 10px;
 }
 
 
@@ -259,7 +266,7 @@ select {
 }
 
 .conteudo-atividade {
-    width: 70%;
+    width: 90%;
     height: 500px;
     margin: auto;
     display: none;
@@ -267,7 +274,6 @@ select {
     background-color: #EEF2F4;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.39), 0 2px 10px 0 rgba(0, 0, 0, 0.20);
     justify-content: space-between;
-    animation: zoomoverlay 0.6s;
     box-sizing: border-box;
     padding: 10px;
     position: relative;
@@ -285,7 +291,7 @@ select {
 
 .lado-direito {
     width: 27%;
-    height: 300px;
+    height: 350px;
     margin-top: 20px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.39), 0 2px 10px 0 rgba(0, 0, 0, 0.20);
     box-sizing: border-box;
@@ -329,6 +335,10 @@ select {
 
 .d-block {
     display: block !important;
+}
+
+.mt-1 {
+    margin-top: 15px;
 }
 
 @keyframes zoomoverlay {
