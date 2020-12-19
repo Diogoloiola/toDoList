@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nomeAtividade: MyString
+  conteudoAtividade: MyString
+  criadaPor: MyString
+  pessoaResponsavel: MyString
+  estado: 1
+
+two:
+  nomeAtividade: MyString
+  conteudoAtividade: MyString
+  criadaPor: MyString
+  pessoaResponsavel: MyString
+  estado: 1

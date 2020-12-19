@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nomeatividade:</strong>
+  <%= @atividade.nomeAtividade %>
+</p>
+
+<p>
+  <strong>Conteudoatividade:</strong>
+  <%= @atividade.conteudoAtividade %>
+</p>
+
+<p>
+  <strong>Criadapor:</strong>
+  <%= @atividade.criadaPor %>
+</p>
+
+<p>
+  <strong>Pessoaresponsavel:</strong>
+  <%= @atividade.pessoaResponsavel %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @atividade.estado %>
+</p>
+
+<%= link_to 'Edit', edit_atividade_path(@atividade) %> |
+<%= link_to 'Back', atividades_path %>
