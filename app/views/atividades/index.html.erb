@@ -1,35 +1,78 @@
 <p id="notice"><%= notice %></p>
+   <div class="conteudo">
+        <header>
+            <nav>
+                <ul class="nav-links1">
+                    <li class="cor-branca"><a href="#">To do List Now</a></li>
+                    <li class="config-link-nav">
+                        <a id="hora" href="#"></a>
+                    </li>
+                    <li class=""><a href="#">Usuario 01</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="links">
+            <div>
+                <ul class="nav-links2 bg-branco">
+                    <li class="borda-direita link-ativo"> <a class="cor-preta" href="">Tarefas</a></li>
+                    <li class="borda-direita "><a class="cor-preta" href="kambam.html">Kambam</a></li>
+                    <li class="borda-direita"><a class="cor-preta" href="tarefas.html">Cadastrar Atividade</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="tarefas">
+            <table class="tabela">
+              <thead>
+                <tr>
+                  <th>Nome Atividade</th>
+                  <th>Conteudo Atividade</th>
+                  <th>Criada por</th>
+                  <th>Pessoa Responsavel</th>
+                  <th>Estado</th>
+                  <th colspan="3"></th>
+                </tr>
+              </thead>
 
-<h1>Atividades</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Nomeatividade</th>
-      <th>Conteudoatividade</th>
-      <th>Criadapor</th>
-      <th>Pessoaresponsavel</th>
-      <th>Estado</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @atividades.each do |atividade| %>
-      <tr>
-        <td><%= atividade.nomeAtividade %></td>
-        <td><%= atividade.conteudoAtividade %></td>
-        <td><%= atividade.criadaPor %></td>
-        <td><%= atividade.pessoaResponsavel %></td>
-        <td><%= atividade.estado %></td>
-        <td><%= link_to 'Show', atividade %></td>
-        <td><%= link_to 'Edit', edit_atividade_path(atividade) %></td>
-        <td><%= link_to 'Destroy', atividade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
+              <tbody>
+                <% @atividades.each do |atividade| %>
+                  <tr>
+                    <td><%= atividade.nomeAtividade %></td>
+                    <td><%= atividade.conteudoAtividade %></td>
+                    <td><%= atividade.criadaPor %></td>
+                    <td><%= atividade.pessoaResponsavel %></td>
+                    <td><%= atividade.estado %></td>
+                    <td><%= link_to 'Show', atividade %></td>
+                    <td><%= link_to 'Edit', edit_atividade_path(atividade) %></td>
+                    <td><%= link_to 'Destroy', atividade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+        </section>
+        <section>
+            <div id="overlay">
+                <div class="conteudo-atividade" style="display: flex !important;">
+                    <span onclick="fechar()" id="close-overlay">&times</span>
+                    <div class="lado-esquerdo">
+                        <h3>Nome da Atividade</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero minus beatae itaque assumenda totam asperiores unde, voluptatem sapiente ducimus ratione ut ex tenetur, laudantium, veniam reprehenderit voluptates vitae harum. Libero?
+                        </p>
+                    </div>
+                    <div class="lado-direito">
+                        <div class="titulo-overlay">
+                            <h3>Detalhes</h3>
+                        </div>
+                        <div class="conteudo-overlay">
+                            <ul class="link-overlay">
+                                <li><span class="span-overlay">Criada em:</span> 19/12/2020</li>
+                                <li><span class="span-overlay">Criada por:</span>Diogo</li>
+                                <li><span class="span-overlay">Pessoa responsavel</span> Diogo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 <%= link_to 'New Atividade', new_atividade_path %>
