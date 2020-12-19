@@ -1,0 +1,91 @@
+<div class="conteudo">
+        <header>
+            <nav>
+                <ul class="nav-links1">
+                    <li class="cor-branca"><a href="#">To do List Now</a></li>
+                    <li class="config-link-nav">
+                        <a id="hora" href="#"></a>
+                    </li>
+                    <li class=""><a href="#">Usuario 01</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="links">
+            <div>
+                <ul class="nav-links2 bg-branco">
+                   <li class="borda-direita">
+                      <%= link_to 'Tarefas', atividades_path, class: "cor-preta" %>
+                    </li>
+                    <li class="borda-direita link-ativo">
+                      <a class="cor-preta" href="#">Kanban</a>
+                      </li>
+                    <li class="borda-direita">
+                      <%= link_to 'Cadastrar Atividade', new_atividade_path, class: "cor-preta" %>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="tarefas">
+            <div class="kambam">
+                <div class="item">
+                    <div class="titulo-item bg-cinza">
+                        <h3>Para fazer</h3>
+                    </div>
+                    <div class="content-tarefas" id="para-fazer">
+                        
+                    </div>
+                </div>
+                <div class="item" >
+                    <div class="titulo-item bg-amarelo">
+                        <h3>Em andamento</h3>
+                    </div>
+                    <div class="content-tarefas" id="fazendo">
+                       
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="titulo-item bg-vermelho">
+                        <h3>Feito</h3>
+                    </div>
+                    <div class="content-tarefas" id="feito">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        $( document ).ready(function() {
+            let paraFazerDiv = document.querySelector("#para-fazer");
+            let fazendoDiv = document.querySelector("#fazendo");
+            let feitoDiv = document.querySelector("#feito");
+            const url = "http://localhost:3000/atividades.json";
+            $.ajax({
+                url: url,
+                type: 'GET',
+                success: function(atividades) {
+                    atividades.forEach(atividade => {
+                        let div = document.createElement('div');
+                        let titulo = document.createElement('h4');
+
+                        div.classList.add('atividade')
+                        titulo.innerHTML = atividade.nomeAtividade;
+                        div.appendChild(titulo)
+
+                        if(atividade.estado == 0){
+                            div.classList.add('borda-cinza')
+                            paraFazerDiv.appendChild(div)
+                        }
+                        else if(atividade.estado == 1){
+                             div.classList.add('borda-amarela')
+                            fazendoDiv.appendChild(div)
+                        }else{
+                            div.classList.add('borda-vermelha')
+                            feitoDiv.appendChild(div)
+                        }
+                    });
+                }
+            });
+        });
+    </script>
