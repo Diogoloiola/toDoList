@@ -207,7 +207,8 @@ tr:nth-child(even) {
     padding: 10px;
 }
 
-.form-input {
+.form-input,
+select {
     width: 100%;
     display: block;
     margin-top: 10px;
