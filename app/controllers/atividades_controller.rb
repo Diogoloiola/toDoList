@@ -15,6 +15,7 @@ class AtividadesController < ApplicationController
   # GET /atividades/new
   def new
     @atividade = Atividade.new
+    @usuarios = Usuario.all
   end
 
   # GET /atividades/1/edit
@@ -69,6 +70,6 @@ class AtividadesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def atividade_params
-      params.require(:atividade).permit(:nomeAtividade, :conteudoAtividade, :criadaPor, :pessoaResponsavel, :estado)
+      params.require(:atividade).permit(:nomeAtividade, :conteudoAtividade, :criadaPor, :pessoaResponsavel, :estado, :usuario_id)
     end
 end
