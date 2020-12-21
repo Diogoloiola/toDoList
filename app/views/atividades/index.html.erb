@@ -59,9 +59,9 @@
                             <% end %>
                         <% end %>
                         <td><%= atividade.usuario_id %></td>
-                        <td><%= link_to 'Show', atividade %></td>
-                        <td><%= link_to 'Edit', edit_atividade_path(atividade) %></td>
-                        <td><%= link_to 'Destroy', atividade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                        <td><%= link_to 'Mostrar', atividade %></td>
+                        <td><%= link_to 'Editar', edit_atividade_path(atividade) %></td>
+                        <td><%= link_to 'Excluir', atividade, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
 
                      <% end %>
                   </tr>
