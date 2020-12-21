@@ -19,7 +19,6 @@
                     <li class="config-link-nav">
                         <a id="hora" href="#"></a>
                     </li>
-                    <li class=""><a href="#">Usuario 01</a></li>
                 </ul>
             </nav>
         </header>
@@ -36,6 +35,10 @@
                     <li class="borda-direita link-ativo">
                       <a class="cor-preta" href="#">Cadastrar Atividade</a>
                     </li>
+                     <li class="borda-direita">
+                      <%= link_to "Sair",  destroy_usuario_session_path,class: "cor-preta" ,method: :delete%>
+                    </li>
+                     
                 </ul>
             </div>
         </section>
