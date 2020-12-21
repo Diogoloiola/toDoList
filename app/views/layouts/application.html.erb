@@ -12,6 +12,10 @@
   </head>
 
   <body>
+    
+    <% if notice %>
+       <%= render 'layouts/alerta'%>
+    <% end %>
     <%= yield %>
   </body>
 </html>
