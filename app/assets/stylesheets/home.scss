@@ -16,6 +16,10 @@
     justify-content: space-between;
 }
 
+.justify-content-around {
+    justify-content: space-around;
+}
+
 .ul a {
     display: block;
     text-decoration: none;
@@ -23,7 +27,7 @@
 }
 
 .banner {
-    height: 300px;
+    height: 85vh;
     background-color: #0099FF;
     color: #fff;
 }
@@ -67,4 +71,14 @@
 .w-70 {
     width: 70%;
     margin: auto;
+}
+
+.bg-branco {
+    background-color: #fff;
+}
+
+footer {
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
 }
