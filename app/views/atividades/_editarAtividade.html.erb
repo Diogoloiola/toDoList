@@ -54,13 +54,20 @@
                   </div>
 
                   <div class="field">
-                    <%= form.label :"Criada Por" %>
-                    <%= form.text_field :criadaPor, class: "form-input" %>
+                    <%= form.text_field :criadaPor, class: "form-input", type: :hidden %>
+                  </div>
+
+                 <div class="field">
+                    <%= form.label "Pessoa Responsavel" %>
+                    <select class="form-input" name="atividade[pessoaResponsavel]" id="select-usuarios">
+                      <% @usuarios.each do |usuario| %>
+                        <option value=<%=usuario.email%> id=<%=usuario.id%>><%=usuario.email%></option>
+                     <% end %>
+                    </select>
                   </div>
 
                   <div class="field">
-                    <%= form.label "Pessoa Responsavel" %>
-                    <%= form.text_field :pessoaResponsavel, class: "form-input"  %>
+                    <%= form.text_field :usuario_id,id: :atividade_usuario_id, class: "form-control", value: @usuarios[0].id, type: :hidden  %>
                   </div>
 
                   <div class="field">
@@ -74,6 +81,14 @@
             </div>
         </section>
     </div>
+     <script>
+         $( document ).ready(function() { 
+            $('#select-usuarios').change(function(){
+                let input = document.querySelector("#atividade_usuario_id")
+                input.value = $("#select-usuarios option:selected")[0].id
+            })
+         });
+    </script>
 
 <% end %>
 

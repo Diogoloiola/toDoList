@@ -20,6 +20,7 @@ class AtividadesController < ApplicationController
 
   # GET /atividades/1/edit
   def edit
+    @usuarios = Usuario.all
   end
 
   # POST /atividades
