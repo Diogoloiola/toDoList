@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_19_183421) do
+ActiveRecord::Schema.define(version: 2020_12_21_135841) do
 
   create_table "atividades", force: :cascade do |t|
     t.string "nomeAtividade"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2020_12_19_183421) do
     t.integer "estado"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "usuario_id"
+    t.index ["usuario_id"], name: "index_atividades_on_usuario_id"
   end
 
   create_table "usuarios", force: :cascade do |t|
