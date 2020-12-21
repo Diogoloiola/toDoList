@@ -5,22 +5,20 @@
                 <h3>To do List Now</h3>
             </div>
             <div>
-                <% if  usuario_signed_in? %>
-                    <ul class="ul">
-                        <li>
-                            <%= link_to "Sing out",  destroy_usuario_session_path, method: :delete%>
-                        </li>
-                        <li>
-                            <%= link_to "Dashboard",  atividades_path%>
-                        </li>
-                    </ul>
+                <ul class="ul">
+                   <% if usuario_signed_in? %>
+                   <li>
+                        <%= link_to "Dashboard", atividades_path, class: "mr-10"%>
+                    </li>
+                    <li>
+                        <%= link_to "Sair",  destroy_usuario_session_path, method: :delete%>
+                    </li>
                     <% else %>
-                        <ul class="ul">
-                            <li>
-                                <%= link_to "Sing in",  new_usuario_session_path, id: "teste", class: "nav-link"%>
-                            </li>
-                        </ul>
-                <% end %>
+                        <li>
+                            <%= link_to "Logar",  new_usuario_session_path, id: "teste", class: "nav-link"%>
+                        </li>
+                    <% end %>
+                </ul> 
             </div>
         </div>
     </nav>

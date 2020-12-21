@@ -20,6 +20,10 @@
     justify-content: space-around;
 }
 
+.ul {
+    display: flex;
+}
+
 .ul a {
     display: block;
     text-decoration: none;
@@ -81,4 +85,9 @@ footer {
     padding: 10px;
     box-sizing: border-box;
     text-align: center;
+    font-weight: 700;
+}
+
+.mr-10 {
+    margin-right: 10px;
 }
