@@ -59,13 +59,13 @@
     
     <script>
         $( document ).ready(function() {
+            let linkApi = location.href.replace('/kanban/index','/atividades.json')
             let paraFazerDiv = document.querySelector("#para-fazer");
             let fazendoDiv = document.querySelector("#fazendo");
             let feitoDiv = document.querySelector("#feito");
-            const url = "http://localhost:3000/atividades.json";
             const emailUsuario = '<%=current_usuario.email%>';
             $.ajax({
-                url: url,
+                url: linkApi,
                 type: 'GET',
                 success: function(atividades) {
                     atividades.forEach(atividade => {
