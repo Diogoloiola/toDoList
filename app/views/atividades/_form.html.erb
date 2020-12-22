@@ -61,7 +61,11 @@
                     <%= form.label "Pessoa Responsavel" %>
                     <select class="form-input" name="atividade[pessoaResponsavel]" id="select-usuarios">
                       <% @usuarios.each do |usuario| %>
-                        <option value=<%=usuario.email%> id=<%=usuario.id%>><%=usuario.email%></option>
+                        <% if usuario == current_usuario %>
+                            <option selected value=<%=usuario.email%> id=<%=usuario.id%>><%=usuario.email%></option>
+                          <%else%>
+                            <option value=<%=usuario.email%> id=<%=usuario.id%>><%=usuario.email%></option>
+                        <% end %>
                      <% end %>
                     </select>
                   </div>
