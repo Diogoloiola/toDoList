@@ -27,7 +27,7 @@ class AtividadesController < ApplicationController
   # POST /atividades.json
   def create
     @atividade = Atividade.new(atividade_params)
-
+    @usuarios = Usuario.all
     respond_to do |format|
       if @atividade.save
         format.html { redirect_to @atividade, notice: 'Atividade was successfully created.' }
@@ -42,6 +42,7 @@ class AtividadesController < ApplicationController
   # PATCH/PUT /atividades/1
   # PATCH/PUT /atividades/1.json
   def update
+    @usuarios = Usuario.all
     respond_to do |format|
       if @atividade.update(atividade_params)
         format.html { redirect_to @atividade, notice: 'Atividade was successfully updated.' }
