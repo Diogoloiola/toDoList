@@ -43,7 +43,7 @@
               <tbody>
                 <% @atividades.each do |atividade| %>
                   <tr>
-                  <% if atividade.usuario == current_usuario %>
+                  <% if atividade.pessoaResponsavel == current_usuario.email %>
                                      
                         <td><%= atividade.nomeAtividade %></td>
                         <td><%= atividade.created_at %></td>

@@ -70,7 +70,7 @@
                   </div>
 
                   <div class="field">
-                    <%= form.text_field :usuario_id,id: :atividade_usuario_id, class: "form-control", value: @usuarios[0].id, type: :hidden  %>
+                    <%= form.text_field :usuario_id,id: :atividade_usuario_id, class: "form-control", value: current_usuario.id, type: :hidden  %>
                   </div>
 
                   <div class="field">
