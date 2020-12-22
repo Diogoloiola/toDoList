@@ -1,8 +1,7 @@
 <%= form_with(model: atividade) do |form| %>
   <% if atividade.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(atividade.errors.count, "error") %> prohibited this atividade from being saved:</h2>
-
+      <h2>Problemas ao inserir os dados, olhe as mensagens de erro e tente novamente</h2>
       <ul>
         <% atividade.errors.each do |error| %>
           <li><%= error.full_message %></li>

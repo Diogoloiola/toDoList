@@ -1,15 +1,4 @@
 <%= form_with(model: atividade) do |form| %>
-  <% if atividade.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(atividade.errors.count, "error") %> prohibited this atividade from being saved:</h2>
-
-      <ul>
-        <% atividade.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
   
   <div class="conteudo">
         <header>
@@ -43,6 +32,16 @@
             </div>
         </section>
         <section class="tarefas">
+            <% if atividade.errors.any? %>
+              <div id="error_explanation">
+                <h2>Problemas ao inserir os dados, olhe as mensagens de erro e tente novamente</h2>
+                <ul class="links-erros">
+                  <% atividade.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
             <div class="formulario-atividade">
                  <div class="field">
                     <%= form.label :"Nome Atividade" %>
