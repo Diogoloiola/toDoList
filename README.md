@@ -71,6 +71,18 @@ Para ver com mais detalhes sobre a atividade volte para a pagina inicial do dash
 
 <img src="https://github.com/Diogoloiola/toDoList/blob/master/imagens/show.png">
 
+## Rodar os casos de teste
+
+Primeiramente execute o comando abaixo.
+
+    bin/rails db:migrate RAILS_ENV=test
+
+Depois execute
+
+    rake teste
+
+Depois aparecerar os resultados
+
 ## Acessar o Site
 
 Para fim de facilitar a anailse do site, o site está disponivel no heroku clique <a href="https://testetodolistestagio.herokuapp.com/">Aqui</a> para acessar

@@ -8,7 +8,7 @@ class AtividadeTest < ActiveSupport::TestCase
    flag = Atividade.new(nomeAtividade: "teste", pessoaResponsavel: "maria").invalid?
    assert(flag == true, 'nao pode ser deixado em branco')
   end  
-  test "Objetio sem a pessoa resonsavel" do
+  test "Objetio sem o nome da atividade" do
     flag = Atividade.new(conteudoAtividade: "isso é uma atividade que de ser entregue ate sexta", pessoaResponsavel: "maria").invalid?
     assert(flag == true, 'nao pode ser deixado em branco')
    end
