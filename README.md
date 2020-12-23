@@ -34,7 +34,7 @@ Após o Login você volta para a pagina inicial, mas agora você pode acessar o 
 
 Agora estamos no dashboard, aqui temos as seguintes opções.
 
-<img src="https://github.com/Diogoloiola/toDoList/blob/master/imagens/dashboard.png>
+<img src="https://github.com/Diogoloiola/toDoList/blob/master/imagens/dashboard.png">
 
 * Tarefas
   
@@ -58,7 +58,7 @@ Para facilitar visualização dos estados das atividades existe o quadrao kanban
 ## Cadastro de atividades
 Para realizar o cadastro das ativiades você deve preenhcer os campos como mostrado na figura abaixo, podendo escolher o usuário que deve fazer a atividade.
 
-<img src="https://github.com/Diogoloiola/toDoList/blob/master/imagens/cadastrarAtividade.png>
+<img src="https://github.com/Diogoloiola/toDoList/blob/master/imagens/cadastrarAtividade.png">
 
 ## Editar atividades
 Para editar uma atividade clique em Tarefas, clique em editar, você pode alterar o estado da atividade ou passar a atividade para outro usuário
