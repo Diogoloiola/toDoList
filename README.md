@@ -1,6 +1,6 @@
 # To do list now
 
-Esse é o desafio que foi prosposto para a vaga de estagio, os requisitos do sistemas estão abaixo.
+Esse é o desafio que foi prosposto para a vaga de estagio, os requisitos do sistema estão abaixo.
 
 * Cada colaborador poderá criar tarefas, e designá-las para um outro colaborador, que poderá alterar o status atual da mesma,
 ou repassar a outro colaborar.
@@ -11,30 +11,30 @@ ou repassar a outro colaborar.
 
 # Como usar o sistema
 
-Aqui abaixo temos a pagina inicial do sistema, clique em logar.
+Aqui abaixo temos a página inicial do sistema, clique em logar.
 
-<img src="https://github.com/Diogoloiola/toDoList/tree/master/imagens/paginaInicia1.png">
+<img src="https://github.com/Diogoloiola/toDoList/blob/master/imagens/paginaInicia1.png">
 
 ## Utilizando o formulário
 
-Depois de clicar em logar vai aparecer o formulário abaixo, você pode criar outros usuários para teste clicando em não tenho conta. As credenciais do usuario padrão estão aqui
+Depois de clicar em logar vai aparecer o formulário abaixo, você pode criar outros usuários para teste clicando em não tenho conta. As credenciais do usuario padrão estão aqui.
 
-<img src="https://github.com/Diogoloiola/toDoList/tree/master/imagens/login.png">
+<img src="https://github.com/Diogoloiola/toDoList/blob/master/imagens/login.png">
 
 pagina login
 
      teste@teste.com
      1234567
 
-Após o Login você volta para a pagina inicial, mas agora você pode acessar o dashboard do site, clique em dashboard para acessar
+Após o Login você volta para a pagina inicial, mas agora você pode acessar o dashboard do site, clique em dashboard para acessar.
 
-<img src="https://github.com/Diogoloiola/toDoList/tree/master/imagens/paginaInicia2.png">
+<img src="https://github.com/Diogoloiola/toDoList/blob/master/imagens/paginaInicia2.png">
 
 ## Dashboard
 
 Agora estamos no dashboard, aqui temos as seguintes opções.
 
-<img src="https://github.com/Diogoloiola/toDoList/tree/master/imagens/dashboard.png">
+<img src="https://github.com/Diogoloiola/toDoList/blob/master/imagens/dashboard.png>
 
 * Tarefas
   
@@ -49,7 +49,7 @@ Agora estamos no dashboard, aqui temos as seguintes opções.
 
 Para facilitar visualização dos estados das atividades existe o quadrao kanban possuindo os seguintes estados.
 
-<img src="https://github.com/Diogoloiola/toDoList/tree/master/imagens/kanaban.png">
+<img src="https://github.com/Diogoloiola/toDoList/blob/master/imagens/kanaban.png">
 
 * Para fazer
 * Em andamento
@@ -58,18 +58,18 @@ Para facilitar visualização dos estados das atividades existe o quadrao kanban
 ## Cadastro de atividades
 Para realizar o cadastro das ativiades você deve preenhcer os campos como mostrado na figura abaixo, podendo escolher o usuário que deve fazer a atividade.
 
-<img src="https://github.com/Diogoloiola/toDoList/tree/master/imagens/cadastrarAtividade.png">
+<img src="https://github.com/Diogoloiola/toDoList/blob/master/imagens/cadastrarAtividade.png>
 
 ## Editar atividades
 Para editar uma atividade clique em Tarefas, clique em editar, você pode alterar o estado da atividade ou passar a atividade para outro usuário
 
-<img src="https://github.com/Diogoloiola/toDoList/tree/master/imagens/editar.png">
+<img src="https://github.com/Diogoloiola/toDoList/blob/master/imagens/editar.png">
 
 ## Mostrar
 
-Para ver com mais detalhes sobre a atividade volte para a pagina inicial do dashboarde e clique em mostrar.
+Para ver com mais detalhes sobre a atividade volte para a pagina inicial do dashboard e clique em mostrar.
 
-<img src="https://github.com/Diogoloiola/toDoList/tree/master/imagens/show.png">
+<img src="https://github.com/Diogoloiola/toDoList/blob/master/imagens/show.png">
 
 ## Acessar o Site
 
